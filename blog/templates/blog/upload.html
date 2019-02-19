@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	<h2>upload</h2>
+	<form method="post" enctype="multipart/form-data" novalidate>
+		{% csrf_token %}
+		{ form.as_p }}
+	 	
+	    <input type="file" name="document">
+	    <button type="submit">Upload</button>
+	</form>
+{% endblock %}
